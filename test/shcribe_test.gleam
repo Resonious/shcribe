@@ -21,7 +21,7 @@ fn json_handler(req: request.Request(BitArray)) -> response.Response(BitArray) {
   response.Response(200, [], resp)
 }
 
-pub fn scribe_test() {
+pub fn shcribe_test() {
   let config = shcribe.Config(
     destination: shcribe.File("out.md"),
     converter: shcribe.as_is(),

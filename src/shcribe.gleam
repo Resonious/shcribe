@@ -1,7 +1,7 @@
 import gleam/bool
 import gleam/bit_array
 import gleam/result
-import json_pretty
+import shcribe/json_pretty
 import gleam/json
 import gleam/dynamic/decode
 import gleam/list
