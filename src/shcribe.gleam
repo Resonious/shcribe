@@ -14,11 +14,6 @@ import simplifile
 import gleam/string_tree
 import gleam/http/response
 import gleam/http/request
-import gleam/io
-
-pub fn main() -> Nil {
-  io.println("Hello from scribe!")
-}
 
 pub type Destination {
   File(path: String)

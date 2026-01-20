@@ -1,4 +1,4 @@
-import scribe
+import shcribe
 import gleam/http
 import gleam/bit_array
 import gleam/json
@@ -22,9 +22,9 @@ fn json_handler(req: request.Request(BitArray)) -> response.Response(BitArray) {
 }
 
 pub fn scribe_test() {
-  let config = scribe.Config(
-    destination: scribe.File("out.md"),
-    converter: scribe.as_is(),
+  let config = shcribe.Config(
+    destination: shcribe.File("out.md"),
+    converter: shcribe.as_is(),
   )
 
   let req_body = json.object([
@@ -39,7 +39,7 @@ pub fn scribe_test() {
     |> request.set_header("accept", "application/json")
     |> request.set_body(req_body)
 
-  scribe.call(
+  shcribe.call(
     req,
     json_handler,
     with: config,
