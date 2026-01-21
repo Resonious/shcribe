@@ -71,11 +71,11 @@ fn headers_to_md(headers: List(#(String, String))) -> string_tree.StringTree {
   let header_name_values = list.map(headers, fn(header) {
     let #(name, value) = header
 
-    string_tree.from_string("| ")
+    string_tree.from_string("| `")
     |> string_tree.append(name)
-    |> string_tree.append(" | ")
+    |> string_tree.append("` | `")
     |> string_tree.append(value)
-    |> string_tree.append(" |")
+    |> string_tree.append("` |")
   })
   |> string_tree.join("\n")
 
