@@ -55,6 +55,7 @@ fn to_markdown(
   |> string_tree.append_tree(headers_to_md(resp.headers))
   |> string_tree.append("\n\n")
   |> string_tree.append_tree(body_to_md(resp.body, resp.headers |> list.key_find("content-type")))
+  |> string_tree.append("\n\n")
 }
 
 fn pretty_json(body: BitArray) -> Result(string_tree.StringTree, Nil) {
